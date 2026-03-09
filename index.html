@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <p><h1>FreakBeast Fitness Tracker - Project Abstraction</h1></p>
+
+<h3> 1. Project Overview</h3>
+<p>FreakBeast Fitness Tracker is a modern, cross-platform Android application developed using a MERN-adjacent stack. 
+It is designed to assist users in managing their workout routines, tracking real-time session performance, establishing fitness goals, 
+and analyzing comprehensive progress reports.</p>
+
+<h3> 2. Core Functional Modules (Features)</h3>
+<p><strong>User Authentication & Profile</strong>: Secure sign-up/login using JWT, along with profile management (e.g., BMI calculation, user stats).
+<br> <strong>Workout Planner</strong>: Interface to create, modify, and view flexible daily and weekly workout routines with granular exercise details (sets, reps, weight, rest times).
+<br> <strong>Session Tracking</strong>: Real-time workout session logging, allowing users to actively record set metrics as they train.
+<br> <strong>Goal Management</strong>: Tools to set up and track specific, measurable fitness targets (e.g., weight loss, strength gains) with visual progress indicators.
+<br> <strong>Progress Reporting</strong>: Historical summaries of workouts and the ability to generate and download comprehensive PDF progress reports.
+<br> <strong>Customization/Configuration</strong>: Support for Light/Dark mode switching and notification controls.</p>
+
+<h3> 3. Technology Stack</h3>
+<p>Frontend / Client UI:  React, Vite
+Language : TypeScript (end-to-end type safety)
+<br>Styling: Tailwind CSS & shadcn-ui (utility-first and component libraries)
+<br>Backend / Logic : Node.js via Supabase Edge Functions (for complex rules, PDF generation)
+Database & Auth : Supabase / PostgreSQL (handling data persistence, real-time subscriptions, secure auth, and Row Level Security)
+
+<h3> 4. Architectural Design</h3>
+<p>The platform architecture utilizes a clear separation of concerns, divided into three main layers:<br>
+1. Client Layer: Manages views, state management, and user interaction within the React environment. Employs client-side caching to reduce unnecessary latency and redundant API calls.
+2. Logic Layer: Contains business rules executed serverlessly via Supabase Edge Functions. It runs complex calculations securely.<br>
+3. Data Persistence Layer: Ensures structured, relational, and real-time data integrity via PostgreSQL, governed by strict authorization boundaries using Row Level Security (RLS). Communications are strictly authenticated through Supabase APIs.</p>
+
+<h3> 5. Development Principles</h3>
+<p>Modular Components: Emphasis on reusable functional components to reduce code duplication.
+Strict Typing : TypeScript enforces data contracts across all layers, minimizing runtime errors.<br>
+Optimized Data Fetching : Responsive UI achieved by managing data flow efficiently and caching localized state.</p>
+</body>
+</html>
